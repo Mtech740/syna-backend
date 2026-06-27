@@ -382,7 +382,8 @@
 
   <script>
     // ===== CONFIG =====
-    const API_BASE = '';
+    // ✅ UPDATED: Using Render backend URL
+    const API_BASE = 'https://syna-backend-iozq.onrender.com';
     let token = localStorage.getItem('token');
     let currentUser = null;
 
@@ -594,7 +595,7 @@
       }
 
       try {
-        const response = await fetch('/api/subscription/request', {
+        const response = await fetch(API_BASE + '/api/subscription/request', {
           method: 'POST',
           headers: {
             'Content-Type': 'application/json',
